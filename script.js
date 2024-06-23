@@ -1,5 +1,6 @@
 let buttons = document.querySelectorAll(".button")
 let output = document.querySelector(".output")
+const delBtn = document.querySelector(".del")
 
 const Ac = document.querySelector(".ac") 
 
@@ -9,6 +10,7 @@ const multi = document.querySelector(".multi").textContent
 const divide = document.querySelector(".divide").textContent
 const percentage = document.querySelector(".percentage").textContent
 const equal = document.querySelector(".equal")
+
 // console.log(typeof(add))
 
 // console.log(buttons)
@@ -164,4 +166,12 @@ equal.addEventListener("click",()=>{
 
 Ac.addEventListener("click",()=>{
     output.innerHTML = ""
+})
+
+
+delBtn.addEventListener("click",()=>{
+    // console.log(typeof(output.innerHTML))
+    const newoutput = output.innerHTML.slice(0,-1)
+    // console.log(newoutput)
+    output.innerHTML = newoutput
 })
